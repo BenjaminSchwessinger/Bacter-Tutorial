@@ -19,7 +19,9 @@ inferred from a given data set depends heavily on the size of the data
 set, and the rates of recombination and mutation for the population
 under study, and the sampling procedure.
 
-----
+This tutorial will gently walk you through the process of using Bacter,
+from to jointly infer an ARG and population model parameters from an
+example multi-locus data set.
 
 Installation
 ============
@@ -51,14 +53,9 @@ Then, ensure the "bacter" package is highlighted before pressing the
 That's it! Bacter is now installed. It is a good idea to restart BEAUti
 at this point.
 
-----
 
-Tutorial: Basic Analysis
-========================
-
-This tutorial will gently walk you through the process of using Bacter,
-from to jointly infer an ARG and population model parameters from an
-example multi-locus data set.
+Setting up the analysis
+=======================
 
 Choosing the Bacter BEAUti template
 -----------------------------------
@@ -69,38 +66,30 @@ Template submenu select "Bacter".
 
 ![image](figures/template.png){width=80%}
 
-Loading an alignment
---------------------
+Loading sequence alignments
+---------------------------
 
-Once the appropriate template is set, we can load our sequence data. In
-this tutorial we will be performing an inference based on simulated data
-that is distributed with Bacter. To load this data, first change
-BEAUti's working directory to that of the installed bacter package by
-selecting File-&gt;Set working dir-&gt;bacter. (This step is **only**
-useful when loading data/XMLs distributed with packages.)
+In this tutorial we will be analyzing a subset of the E. coli data presented in
+[Vaughan et al., Genetics, 2017](http://dx.doi.org/10.1534/genetics.116.193425).  The full data set
+consists of 53 individual gene alignments, each containing 23 sequences. In
+order to keep our tutorial analysis as manageable as possible, we will analyze
+only 12 of these genes.
 
-![image](figures/setwd.png){width=80%}
-
-Then, select File-&gt;Add Alignment, navigate to the examples/
-subdirectory. Hold down the Ctrl key (or Command if you're on a Mac) and
-click to select the two files simulated\_data\_A.fasta and
-simulated\_data\_B.fasta.
+To load the alignments, select File-&gt;Import Alignment and navigate
+to the directory containing the tutorial data.  This directory contains
+12 FASTA files, each containing the alignment for the named gene. Since
+the directory contains only these files and nothing else, we can select
+them all simply using Ctrl+A (or Command+A on a Mac).
 
 ![image](figures/load_alignments.png){width=80%}
 
-Each of these files is a simulated alignment of 20 distinct 5kb
-nucleotide sequences. Each file contains the multiple sequence alignment
-for a distinct locus. That is, each file contains exactly the same
-number of sequences from the same sampled bacteria but from different
-portions of the genome.
-
-After pressing Open, the alignments should be visible as two new records
+After pressing Open, the alignments should be visible as 12 new records
 in the table. By default, each locus is assumed to have its own distinct
 site, clock and "tree" (really ARG here) models. Since our ARGs
 potentially span multiple loci, we should definitely cause the loci to
 share a tree model. This is done by selecting both rows in the table by
 again holding down Ctrl (or Command) and clicking each in turn.
-Alternatively, you can just click on one row and then press Ctrl+A.
+Alternatively, you can just click on one row and then press Ctrl+A, or Command+A on a Mac.
 (This is easier than clicking each row if your data consists of many
 loci.) Once they're selected, press the "Link Trees" button on the
 right-hand side just above the table. In our case, we will use shared
@@ -109,8 +98,8 @@ Clock Models" buttons as well.
 
 ![image](figures/link_models.png){width=80%}
 
-Setting up the analysis
------------------------
+Defining the model
+------------------
 
 We will now configure the model under which the inference will be
 conducted.
@@ -167,7 +156,7 @@ file name (for example bacter\_tutorial.xml), and press the Save button
 to produce the BEAST input XML.
 
 Running the analysis
---------------------
+====================
 
 Run the analysis just as you would any other BEAST 2 analysis. That is,
 
@@ -181,7 +170,7 @@ output window. The analysis we've set up should take around half an hour
 to complete on a modern computer.
 
 Analyzing the results
----------------------
+=====================
 
 During the analysis results are written to several files which can
 usually located in the same directory as the directory containin the
@@ -192,7 +181,8 @@ input XML. These are:
 2.  The **tree** file, which ends in the extension .trees and contains
     sampled ARGs.
 
-### Parameter posteriors
+Parameter posteriors
+--------------------
 
 To examine the sampled parameter posteriors, open Tracer and load the
 log file. In our example analysis, the main parameters we're interested
@@ -212,7 +202,8 @@ in the interests of keeping the length of time needed to complete this
 tutorial from becoming too long, we will now proceed to further analyse
 the results we already have.
 
-### Viewing sampled ARGs
+Viewing sampled ARGs
+--------------------
 
 The ARGs sampled during a Bacter analysis can be viewed using
 browser-based [IcyTree](http://tgvaughan.github.io/icytree) phylogenetic
@@ -249,7 +240,8 @@ as this portion of the file represents ARGs sampled before convergence
 of the MCMC to the true posterior. Later trees should represent
 individual samples drawn from the posterior.
 
-### Creating a summary ARG
+Creating a summary ARG
+----------------------
 
 Individual ARGs sampled from the posterior are poor representations of
 the inference result at best, and at worst they may be completely
@@ -339,13 +331,12 @@ degree of confidence, uncertainty in the location of the other point may
 cause the conversion to appear as a number of lower-support edges.
 
 Wrapping up
------------
+===========
 
 This completes the first tutorial. In a future tutorial we will
 demonstrate how to use Bacter to perform non-parametric inference of
 population dynamics (Bayesian Skyline Plots from ARGs).
 
-----
 
 # Useful Links
 
