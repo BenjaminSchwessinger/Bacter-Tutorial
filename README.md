@@ -122,16 +122,18 @@ calibration information, we will ignore the Clock Model panel.  By doing this,
 we are implicitly deciding that time will be expressed in expected number of
 substitutions per site.
 
-Now switch to the Priors panel. See that As we suspect that population which gave
-rise to our data was growing exponentially, select "Coalescent
-Exponential Population" from the drop-down list of ARG priors. Expand
-the tree prior by clicking on the arrow to the left of "Tree.t".
+Now switch to the Priors panel. See that "Coalescent with constant population"
+is selected as the default tree prior. Expand this tree prior by clicking on
+the arrow to the left of "Tree.t".
 
-Un-check the "estimate" checkboxes to the right of the recombination
+Uncheck the "estimate" checkboxes to the right of the recombination
 rate (Rho) and tract length (Delta) parameters and enter the values
-1.0e-4 and 500.0 respectively. Estimating these parameters can actually
+0.1 and 1000.0 respectively. Estimating these parameters can actually
 be quite difficult, so fixing them to known values is a good idea if
-these are available.
+these are available. In this particular case, while 1000 is a reasonable
+value for the expected conversion tract length of E. Coli, fixing the
+recombination rate to 0.1 is suspect.  We do this solely to reduce the
+computation time required for this analysis.
 
 Select log normal priors for the population growth rate and final size
 parameters, with parameters M=0 and S=2.
