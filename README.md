@@ -104,24 +104,25 @@ Defining the model
 We will now configure the model under which the inference will be
 conducted.
 
-The simulated data that we've loaded was sampled contemporaneously. We
-can therefore ignore the Tip Dates panel. When analyzing real data where
-the samples were collected at very different times you'll want to
-include those times in the analysis by modifying the contents of that
-panel.
+The data that we've loaded was sampled contemporaneously. We can therefore
+ignore the Tip Dates panel. When analyzing data where the samples were
+collected at very different times you'll want to include those times in the
+analysis by modifying the contents of that panel.
 
-Furthermore, the data was simulated using a simple Jukes-Cantor
-substitution model, which is the default configuration given in the Site
-Model panel. When analyzing real data, you will likely want to use a
-more sophisticated substitution model.
+Open the Site Model panel and set the substitution to HKY. This
+model is far superior to the default Jukes-Cantor model as it allows distinct
+transition/transversion rates and non-equal equilibrium base frequencies.
+Leave the default initial value for kappa and the base frequencies as "estimated".
+The site model panel should now look similar to the following:
 
-Open the Clock Model panel and set the clock rate to the true value of
-0.005. (We cannot estimate this parameter without serially sampled
-sequence data.)
+![image](figures/site_model.png){width=80%}
 
-![image](figures/clock_rate.png){width=80%}
+Again, because the data was sampled contemporaneously and we have no relevant
+calibration information, we will ignore the Clock Model panel.  By doing this,
+we are implicitly deciding that time will be expressed in expected number of
+substitutions per site.
 
-Now switch to the Priors panel. As we suspect that population which gave
+Now switch to the Priors panel. See that As we suspect that population which gave
 rise to our data was growing exponentially, select "Coalescent
 Exponential Population" from the drop-down list of ARG priors. Expand
 the tree prior by clicking on the arrow to the left of "Tree.t".
