@@ -195,17 +195,17 @@ input XML. These are:
 Parameter posteriors
 --------------------
 
-To examine the sampled parameter posteriors, open Tracer and load the
-log file. In our example analysis, the main parameters we're interested
-in are the population growth rate and final size. The data were
-simulated under an exponential growth model with rate 0.5 (per unit
-time) and final effective size 5.0. Both these values are well within
-the 95% HPD intervals for the corresponding inferred parameters:
+To examine the sampled parameter marginal posteriors and, more generally, to assess
+the health of our analysis results, open Tracer and load the
+log file. (To do this, select "Import trace file" from the File menu or click the
+"+" button below and to the left of the table in the top left corner of the Tracer window.)
+Shown below is the marginal posterior for the number of conversions ancestral to
+our data.
 
 ![image](figures/tracer.png){width=80%}
 
-Note that the ESS for many parameters, the likelihood in particular, is
-still extremely small. This indicates that, as anticipated, the chain
+Note that the ESS for many parameters, the likelihood in particular, may
+still be extremely small. This indicates that, as anticipated, the chain
 should be run for a lot longer before the results are considered
 trustworthy. We can easily continue/resume the chain just as for any
 other BEAST 2 analysis, and you may wish to try this yourself. However,

@@ -346,7 +346,7 @@ name="alignment">
 <map name="OneOnX" >beast.math.distributions.OneOnX</map>
 
 
-<run id="mcmc" spec="MCMC" chainLength="9000000" storeEvery="10000">
+<run id="mcmc" spec="MCMC" chainLength="1000000" storeEvery="10000">
     <state id="state" storeEvery="10000">
         <stateNode id="Tree.t:Ecoli_rplA" spec="bacter.model.SimulatedACG" delta="1000.0" rho="0.0">
             <populationModel id="ConstantPopulation.0" spec="ConstantPopulation">
