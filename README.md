@@ -204,21 +204,20 @@ our data.
 
 ![image](figures/tracer.png){width=80%}
 
-Note that the ESS for many parameters, the likelihood in particular, may
-still be extremely small. This indicates that, as anticipated, the chain
-should be run for a lot longer before the results are considered
-trustworthy. We can easily continue/resume the chain just as for any
-other BEAST 2 analysis, and you may wish to try this yourself. However,
-in the interests of keeping the length of time needed to complete this
-tutorial from becoming too long, we will now proceed to further analyse
-the results we already have.
+Note that the ESS for many parameters may still be extremely small after 10^6
+iterations. This indicates that, as anticipated, the chain should be run for a
+lot longer before the results are considered trustworthy. We can easily
+continue/resume the chain just as for any other BEAST 2 analysis, and you may
+wish to try this yourself. However, in the interests of keeping the length of
+time needed to complete this tutorial from becoming too long, we will now
+proceed to further analyse the results we already have.
 
 Viewing sampled ARGs
 --------------------
 
-The ARGs sampled during a Bacter analysis can be viewed using
+The ARGs sampled during a Bacter analysis can be viewed using the
 browser-based [IcyTree](http://tgvaughan.github.io/icytree) phylogenetic
-tree and network viewer. Betware that the viewer requires an up-to-date
+tree and network visualizer. Beware that the viewer requires an up-to-date
 version of Firefox or Chrome to function correctly.
 
 To use the viewer, simply open the
@@ -259,7 +258,7 @@ the inference result at best, and at worst they may be completely
 misleading. This is because they contain no indication in the
 uncertainty inherent in what the sequence data tells us of the events
 they describe. Thus, while a single ARG sample may contain features that
-are well-supported by the data, the same ARG will likeliy contain many
+are well-supported by the data, the same ARG will likely contain many
 features that have little or no support at all.
 
 What is needed is some kind of picture of the posterior \_distribution\_
