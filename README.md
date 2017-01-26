@@ -260,13 +260,14 @@ they describe. Thus, while a single sampled ARG may contain features that
 are well-supported by the data, the same ARG will likely contain many
 features that have little or no support at all.
 
-What is needed is some kind of picture of the posterior _distribution_
-over ARG space instead of a single point estimate. Unfortunately, the
-optimal route to producing such a summary is currently an open research
-question. However, Bacter provides an implementation of an algorithm for
-constructing a qualitative summary which is similar in spirit to the
-algorithms which BEAST and other Bayesian phylogenetic packages use to
-summarize distributions over tree space.
+What is needed is some kind of picture of the posterior _distribution_ over ARG
+space instead of a single point estimate. Unfortunately, the optimal route to
+producing such a summary is currently an open research question. However,
+Bacter provides an implementation of an algorithm for constructing a
+qualitative summary which is similar in spirit to the algorithms which BEAST
+and other Bayesian phylogenetic packages use to summarize distributions over
+tree space.
+(Refer to the [paper](http://dx.doi.org/10.1534/genetics.116.193425) for details.)
 
 To produce a summary ARG, open the "AppStore" program that is
 distributed with BEAST 2.
@@ -312,18 +313,30 @@ for the age of each ancestral event have also been included.)
 
 ![image](figures/summary.png){width=80%}
 
+This summary suggests that our E. coli dataset only has evidence for one or two
+conversions: one on the rplA gene with ~60% support and one on the rplO gene
+with much lower support.  Note however, that this summary does not at all rule
+out the possibility of many other conversion events ancestral to the data: it
+simply indicates that only these conversions occur in roughly the same place in
+at least 20% of the posterior samples.
 
-**TODO** 
+This distinction is backed up by the marginal posterior distribution for the number of
+conversion events in the graph shown in the tracer figure above, which has a median
+of 8 events - still very small, but four times the number appearing in the summary.
+The discrepancy is likely made up of conversions that produced very little or no signal
+in the data.
 
 Wrapping up
 ===========
 
-This completes the first tutorial. In a future tutorial we will
-demonstrate how to use Bacter to perform non-parametric inference of
-population dynamics (Bayesian Skyline Plots from ARGs).
+This completes our introductory Bacter tutorial. There are other features that are not
+covered here, such as the ability to perform inference under different parametric and
+non-parametric models of population dynamics.  Tutorials explaining these features
+will appear in the near future on the [Bacter web page](https://tgvaughan.github.io/bacter).
 
 
-# Useful Links
+Useful Links
+============
 
 - [Bayesian Evolutionary Analysis with BEAST 2](http://www.beast2.org/book.html) {% cite BEAST2book2014 --file Tutorial-Template/master-refs.bib %}
 - BEAST 2 website and documentation: [http://www.beast2.org/](http://www.beast2.org/)
