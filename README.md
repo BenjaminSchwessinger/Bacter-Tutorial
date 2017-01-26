@@ -1,8 +1,8 @@
 ---
-author: Timothy G. Vaughan
+author: Tim Vaughan
 level: Intermediate
 title: Bacter Tutorial
-subtitle: Tutorial for using the Bacter package to infer ARGs from bacterial sequence data.
+subtitle: Inferring ARGs from bacterial sequence data.
 beastversion: 2.4.4
 ---
 
