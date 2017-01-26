@@ -143,7 +143,7 @@ The priors panel should now look similar to the following:
 ![image](figures/priors.png){width=80%}
 
 Finally, switch to the MCMC panel and change the chain length to
-2000000. This is almost certainly far too short for a production run,
+1000000 (i.e. 10^6). This is far too short for a production run,
 but means that the example analysis will complete relatively quickly.
 Also, because our run is so short, we'll sample the chain of ARGs more
 frequently. To do this, expand the ACGLogger.t:simulated\_data\_A
@@ -158,6 +158,10 @@ directory you wish the analysis XML to be written to, give it a sensible
 file name (for example bacter\_tutorial.xml), and press the Save button
 to produce the BEAST input XML.
 
+**Note:** If you experience difficulties using BEAUti to generate the
+BEAST XML file but would like to continue immediately with the analysis,
+download and use [this ready-made XML file](xml/bacter_tutorial.xml);
+
 Running the analysis
 ====================
 
@@ -169,14 +173,18 @@ Run the analysis just as you would any other BEAST 2 analysis. That is,
 
 Once BEAST is running, you should see output periodically printed to
 standard out (if you're running BEAST from a terminal emulator) or the
-output window. The analysis we've set up should take around half an hour
+output window. The analysis we've set up should take 15 minutes
 to complete on a modern computer.
+
+If you run out of time to complete the analysis, simply download the
+pre-cooked [log](precooked_runs/bacter_tutorial.log) and [tree](precooked_runs/bacter_tutorial.Ecoli_rplA.trees)
+files and continue the tutorial using them.
 
 Analyzing the results
 =====================
 
 During the analysis results are written to several files which can
-usually located in the same directory as the directory containin the
+usually located in the same directory as the directory containing the
 input XML. These are:
 
 1.  The **log** file, which ends in the extension .log and contains
