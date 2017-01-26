@@ -19,9 +19,8 @@ inferred from a given data set depends heavily on the size of the data
 set, and the rates of recombination and mutation for the population
 under study, and the sampling procedure.
 
-This tutorial will gently walk you through the process of using Bacter,
-from to jointly infer an ARG and population model parameters from an
-example multi-locus data set.
+This tutorial will gently walk you through the process of using Bacter to the
+ARG and associated parameters using an example multi-locus data set.
 
 Installation
 ============
