@@ -270,7 +270,8 @@ tree space.
 (Refer to the [paper](http://dx.doi.org/10.1534/genetics.116.193425) for details.)
 
 To produce a summary ARG, open the "AppStore" program that is
-distributed with BEAST 2.
+distributed with BEAST 2. (You can also select "Launch Apps" from the File menu
+in BEAUti.)
 
 ![image](figures/appstore.png){width=80%}
 
