@@ -350,7 +350,7 @@ def removeMdLines(text):
 		# Match the next horizontal line
 		# Three or more dashes (---)
 		# Can be multiline
-		match = re.search(r'---*', text, re.DOTALL)
+		match = re.search(r'\n\n---*', text, re.DOTALL)
 
 		# No more matches
 		if (match == None):
