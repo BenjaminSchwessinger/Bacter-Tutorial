@@ -255,13 +255,13 @@ Creating a summary ARG
 
 Individual ARGs sampled from the posterior are poor representations of
 the inference result at best, and at worst they may be completely
-misleading. This is because they contain no indication in the
+misleading. This is because they contain no indication of the
 uncertainty inherent in what the sequence data tells us of the events
-they describe. Thus, while a single ARG sample may contain features that
+they describe. Thus, while a single sampled ARG may contain features that
 are well-supported by the data, the same ARG will likely contain many
 features that have little or no support at all.
 
-What is needed is some kind of picture of the posterior \_distribution\_
+What is needed is some kind of picture of the posterior _distribution_
 over ARG space instead of a single point estimate. Unfortunately, the
 optimal route to producing such a summary is currently an open research
 question. However, Bacter provides an implementation of an algorithm for
@@ -274,7 +274,7 @@ distributed with BEAST 2.
 
 ![image](figures/appstore.png){width=80%}
 
-Ensure the ACGAnnotator icon is hilighted, then press the Launch button.
+Ensure the ACGAnnotator icon is highlighted, then press the Launch button.
 This will open a dialog from which you can select the ACG (tree) log
 file and the name and location of the file to which the summary is
 written. In addition, you can adjust:
