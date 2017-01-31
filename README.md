@@ -339,11 +339,7 @@ will appear in the near future on the [Bacter web page](https://tgvaughan.github
 Useful Links
 ============
 
-- [Bayesian Evolutionary Analysis with BEAST 2](http://www.beast2.org/book.html) {% cite BEAST2book2014 --file Bacter-Tutorial/master-refs.bib %}
+- Bacter website and documentation: [https://tgvaughan.github.io/bacter](https://tgvaughan.github.io/bacter)
 - BEAST 2 website and documentation: [http://www.beast2.org/](http://www.beast2.org/)
 - Join the BEAST user discussion: [http://groups.google.com/group/beast-users](http://groups.google.com/group/beast-users) 
-
-# Relevant References
-
-{% bibliography --cited --file Bacter-Tutorial/master-refs.bib %}
 
