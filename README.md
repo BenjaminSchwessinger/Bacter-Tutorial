@@ -42,12 +42,20 @@ Bacter Package Installation
 Bacter is easily installed via the BEAUti package manager. To do this,
 run BEAUti and select "Manage Packages" from the File menu:
 
-![image](figures/beauti.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/beauti.png">
+    <figcaption></figcaption>
+</figure>
 
 Then, ensure the "bacter" package is highlighted before pressing the
 "Install/Upgrade" button:
 
-![image](figures/package_manager.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/package_manager.png">
+    <figcaption></figcaption>
+</figure>
 
 That's it! Bacter is now installed. It is a good idea to restart BEAUti
 at this point.
@@ -63,7 +71,11 @@ Open the BEAUti program. Before doing anything else we must switch to
 the Bacter template. To do this, open the file menu and from the
 Template submenu select "Bacter".
 
-![image](figures/template.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/template.png">
+    <figcaption></figcaption>
+</figure>
 
 Loading sequence alignments
 ---------------------------
@@ -80,7 +92,11 @@ to the directory containing the tutorial data.  This directory contains
 the directory contains only these files and nothing else, we can select
 them all simply using Ctrl+A (or Command+A on a Mac).
 
-![image](figures/load_alignments.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/load_alignments.png">
+    <figcaption></figcaption>
+</figure>
 
 After pressing Open, the alignments should be visible as 12 new records
 in the table. By default, each locus is assumed to have its own distinct
@@ -95,7 +111,11 @@ right-hand side just above the table. In our case, we will use shared
 site and clock models too, so click the "Link Site Models" and "Link
 Clock Models" buttons as well.
 
-![image](figures/link_models.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/link_models.png">
+    <figcaption></figcaption>
+</figure>
 
 Defining the model
 ------------------
@@ -114,7 +134,11 @@ transition/transversion rates and non-equal equilibrium base frequencies.
 Leave the default initial value for kappa and the base frequencies as "estimated".
 The site model panel should now look similar to the following:
 
-![image](figures/site_model.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/site_model.png">
+    <figcaption></figcaption>
+</figure>
 
 Again, because the data was sampled contemporaneously and we have no relevant
 calibration information, we will ignore the Clock Model panel.  By doing this,
@@ -139,7 +163,11 @@ parameters, with parameters M=0 and S=2.
 
 The priors panel should now look similar to the following:
 
-![image](figures/priors.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/priors.png">
+    <figcaption></figcaption>
+</figure>
 
 Finally, switch to the MCMC panel and change the chain length to
 1000000 (i.e. 10^6). This is far too short for a production run,
@@ -150,7 +178,11 @@ section by clicking on the arrow to the left of this line, then set the
 "Log Every" field to 1000. The MCMC panel should now look similar to the
 following:
 
-![image](figures/mcmc_settings.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/mcmc_settings.png">
+    <figcaption></figcaption>
+</figure>
 
 Once your analysis is set up, select File-&gt;Save, navigate to the
 directory you wish the analysis XML to be written to, give it a sensible
@@ -201,7 +233,11 @@ log file. (To do this, select "Import trace file" from the File menu or click th
 Shown below is the marginal posterior for the number of conversions ancestral to
 our data.
 
-![image](figures/tracer.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/tracer.png">
+    <figcaption></figcaption>
+</figure>
 
 Note that the ESS for many parameters may still be extremely small after 10^6
 iterations. This indicates that, as anticipated, the chain should be run for a
@@ -235,7 +271,11 @@ image below, edges were coloured by locus (Style-&gt;"Colour edges by"),
 the colouring legend and the time axis were switched on
 (Style-&gt;"Display legend" and Style-&gt;"Display axis").
 
-![image](figures/icytree.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/icytree.png">
+    <figcaption></figcaption>
+</figure>
 
 ARGs are displayed in IcyTree in a particular way. The solid lines
 depict lineages belonging to the clonal frame, while dashed edges
@@ -273,7 +313,11 @@ To produce a summary ARG, open the "AppStore" program that is
 distributed with BEAST 2. (You can also select "Launch Apps" from the File menu
 in BEAUti.)
 
-![image](figures/appstore.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/appstore.png">
+    <figcaption></figcaption>
+</figure>
 
 Ensure the ACGAnnotator icon is highlighted, then press the Launch button.
 This will open a dialog box from which you can select the ACG (tree) log
@@ -299,7 +343,11 @@ that conversions will only have to appear in 20% of the sampled ARGs to
 be included in the summary. The dialog box should now look like the
 following image:
 
-![image](figures/acgannotator.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/acgannotator.png">
+    <figcaption></figcaption>
+</figure>
 
 Pressing the "Analyze" button will bring up an additional window which
 will report on the progress of creating the summary tree. As there are
@@ -312,7 +360,11 @@ the following figure. (Edges have been coloured by "locus", and labelled with
 their posterior support. Error bars indicating the 95% HPD intervals
 for the age of each ancestral event have also been included.)
 
-![image](figures/summary.png){width=80%}
+<figure>
+    <!--a id="fig:treeannot"></a-->
+    <img style="width:80%;" src="figures/summary.png">
+    <figcaption></figcaption>
+</figure>
 
 This summary suggests that our E. coli dataset only has evidence for one or two
 conversions: one on the rplA gene with ~60% support and one on the rplO gene
