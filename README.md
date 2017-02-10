@@ -158,8 +158,8 @@ value for the expected conversion tract length of E. Coli, fixing the
 recombination rate to 0.1 is suspect.  We do this solely to reduce the
 computation time required for this analysis.
 
-Select log normal priors for the population growth rate and final size
-parameters, with parameters M=0 and S=2.
+Select a log normal prior for the population final size
+parameter, with parameters M=0 and S=2.
 
 The priors panel should now look similar to the following:
 
