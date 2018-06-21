@@ -3,7 +3,7 @@ author: Tim Vaughan
 level: Intermediate
 title: Bacter Tutorial
 subtitle: Inferring ARGs from bacterial sequence data.
-beastversion: 2.4.4
+beastversion: 2.5.0
 ---
 
 
@@ -31,8 +31,8 @@ Software requirements
 In order to use Bacter and visualize its analysis results the following
 software must be installed:
 
--   BEAST 2 version 2.4 or later. <http://www.beast2.org/>
--   Tracer version 1.6 or later.  <https://github.com/beast-dev/tracer/releases/latest>
+-   BEAST 2 version 2.5 or later. <http://www.beast2.org/>
+-   Tracer version 1.7 or later.  <https://github.com/beast-dev/tracer/releases/latest>
 -   A recent version of [Mozilla Firefox](http://www.mozilla.org/firefox)
     or [Google Chrome](http://www.google.com/chrome).
 
@@ -309,7 +309,7 @@ and other Bayesian phylogenetic packages use to summarize distributions over
 tree space.
 (Refer to the [paper](http://dx.doi.org/10.1534/genetics.116.193425) for details.)
 
-To produce a summary ARG, open the "AppStore" program that is
+To produce a summary ARG, open the "AppLauncher" program that is
 distributed with BEAST 2. (You can also select "Launch Apps" from the File menu
 in BEAUti.)
 
@@ -353,7 +353,7 @@ Pressing the "Analyze" button will bring up an additional window which
 will report on the progress of creating the summary tree. As there are
 only a few hundred ARGs present in our log file, this process should
 only take a few seconds. Once it is complete, press the Close button.
-You can also exit the AppStore.
+You can also exit the AppLauncher.
 
 Loading the file summary.tree in IcyTree should produce something similar to
 the following figure. (Edges have been coloured by "locus", and labelled with
